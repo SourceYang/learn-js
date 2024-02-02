@@ -14,6 +14,8 @@ window.onload = function() {
               // the display is regenerated every time a search term is entered.
               list.innerHTML = '';
 
+          const myHistoryCopy = [...myHistory].sort((a, b) => a.length - b.length);
+          
               // loop through the sorted array, and display all the search terms in the list
               for (const itemText of myHistoryCopy) {
                 const listItem = document.createElement('li');
